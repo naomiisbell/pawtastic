@@ -5,6 +5,37 @@ class App extends React.Component {
   constructor() {
     super()
 
+    this.state = {
+      name: '',
+      breed: '',
+      birthday: ''
+    }
+  }
+
+  onNameEntry = (event) => {
+    this.setState({
+      name: event.target.value
+    })
+  }
+
+  onBreedEntry = (event) => {
+    this.setState({
+      breed: event.target.value
+    })
+  }
+
+  onBirthdayEntry = (event) => {
+    this.setState({
+      birthday: event.target.value
+    })
+  }
+
+  handleFormSubmission = (e) => {
+    e.preventDefault();
+    this.setState({
+      formCompleted: true
+    })
+    console.log("Form is submitted")
   }
 
   render() {
@@ -23,6 +54,8 @@ class App extends React.Component {
           <input
             type="name"
             placeholder="Pet's name"
+            value={this.state.name}
+            onChange={this.onNameEntry}
           />
           </div>
 
@@ -36,6 +69,8 @@ class App extends React.Component {
           <input
             type="birthday"
             placeholder="MM/DD/YYYY"
+            value={this.state.birthday}
+            onChange={this.onBirthdayEntry}
           />
           </div>
 
@@ -44,6 +79,8 @@ class App extends React.Component {
           <input
             type="breed"
             placeholder="Pet's breed"
+            value={this.state.breed}
+            onChange={this.onBreedEntry}
           />
           </div>
 
@@ -66,6 +103,11 @@ class App extends React.Component {
             <button className="btn-three">50-100 lbs</button>
             <button className="btn-four">100+ lbs</button>
           </div>
+
+          <button 
+          className="saveForm"
+          type="Save and Exit"
+          >Save and Exit</button>
 
         </form>
       </div>
