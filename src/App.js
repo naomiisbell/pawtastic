@@ -12,7 +12,8 @@ class App extends React.Component {
       <body>
       <div id="parent">
       <div className="sideOne">
-        <img src="https://www.officialgoldenretriever.com/sites/default/files/resize/upload/dog%20without%20pooping-400x600.jpg"></img>
+        <img className="dogImg" src="https://www.officialgoldenretriever.com/sites/default/files/resize/upload/dog%20without%20pooping-400x600.jpg"></img>
+
       </div>
       <div className="sideTwo">
         <h1>Yay! we love dogs! Give us the basics about your pup.</h1>
@@ -23,6 +24,11 @@ class App extends React.Component {
             type="name"
             placeholder="Pet's name"
           />
+          </div>
+
+          <div>
+            <img className="uploadPhotoImg" src="https://icons-for-free.com/iconfiles/png/512/camera+photo+upload+icon-1320184663794870720.png"></img>
+            <label className="photoLabel">Upload a Photo</label>
           </div>
 
           <div className="thirdLabel">
