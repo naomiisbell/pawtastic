@@ -52,3 +52,42 @@ label {
   margin-left: 375px;
 }
 
+.genders {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+button {
+  width: 125px;
+  height: 40px;
+}
+
+button:hover {
+    background-color: lightseagreen;
+  }
+
+.spayedOrNeutered {
+  margin-left: 375px;
+  margin-top: -60px;
+}
+
+.weight {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.btn-one {
+  width: 145px;
+}
+
+.btn-two {
+  width: 145px;
+}
+
+.btn-three {
+  width: 140px;
+}
+
+.btn-four {
+  width: 140px;
+}

@@ -41,6 +41,25 @@ class App extends React.Component {
           />
           </div>
 
+          <div className="genders">
+            <label>Gender</label>
+            <button>Female</button>
+            <button>Male</button>
+          </div>
+
+          <div className="spayedOrNeutered">
+            <label>Spayed or Neutered</label>
+            <button>Yes</button>
+            <button>No</button>
+          </div>
+
+          <div className="weight">
+            <label>Weight</label>
+            <button className="btn-one">0-25 lbs</button>
+            <button className="btn-two">25-50 lbs</button>
+            <button className="btn-three">50-100 lbs</button>
+            <button className="btn-four">100+ lbs</button>
+          </div>
 
         </form>
       </div>
