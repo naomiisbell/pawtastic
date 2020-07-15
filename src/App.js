@@ -8,7 +8,10 @@ class App extends React.Component {
     this.state = {
       name: '',
       breed: '',
-      birthday: ''
+      birthday: '',
+      gender: false,
+      spayNeutBtn: false,
+      weight: false 
     }
   }
 
@@ -30,6 +33,30 @@ class App extends React.Component {
     })
   }
 
+  genderButton = (e) => {
+    e.preventDefault();
+    this.setState({
+      gender: true
+    })
+    console.log("btn is clicked")
+  }
+
+  spayNeutButton = (e) => {
+    e.preventDefault();
+    this.setState({
+      spayNeutBtn: true
+    })
+    console.log("btn is clicked")
+  }
+
+  weightButton = (e) => {
+    e.preventDefault();
+    this.setState({
+      weight: true
+    })
+    console.log("btn is clicked")
+  }
+
   handleFormSubmission = (e) => {
     e.preventDefault();
     this.setState({
@@ -47,7 +74,7 @@ class App extends React.Component {
 
       </div>
       <div className="sideTwo">
-        <h1>Yay! we love dogs! Give us the basics about your pup.</h1>
+        <h1>Yay! We love dogs! Give us the basics about your pup.</h1>
         <form className="pet-basics-form">
           <div className="firstLabel">
           <label>Name</label>
@@ -86,27 +113,37 @@ class App extends React.Component {
 
           <div className="genders">
             <label>Gender</label>
-            <button>Female</button>
-            <button>Male</button>
+            <button onClick={this.genderButton}
+            >Female</button>
+            <button onClick={this.genderButton}
+            >Male</button>
           </div>
 
           <div className="spayedOrNeutered">
             <label>Spayed or Neutered</label>
-            <button>Yes</button>
-            <button>No</button>
+            <button onClick={this.spayNeutButton}
+            >Yes</button>
+            <button onClick={this.spayNeutButton}
+            >No</button>
           </div>
 
           <div className="weight">
             <label>Weight</label>
-            <button className="btn-one">0-25 lbs</button>
-            <button className="btn-two">25-50 lbs</button>
-            <button className="btn-three">50-100 lbs</button>
-            <button className="btn-four">100+ lbs</button>
+            <button className="btn-one"
+            onClick={this.weightButton}
+            >0-25 lbs</button>
+            <button className="btn-two" onClick={this.weightButton}
+            >25-50 lbs</button>
+            <button className="btn-three" onClick={this.weightButton}
+            >50-100 lbs</button>
+            <button className="btn-four" onClick={this.weightButton}
+            >100+ lbs</button>
           </div>
 
           <button 
           className="saveForm"
           type="Save and Exit"
+          onClick={this.handleFormSubmission}
           >Save and Exit</button>
 
         </form>
