@@ -25,6 +25,14 @@ class App extends React.Component {
           />
           </div>
 
+          <div className="thirdLabel">
+          <label>Birthday</label>
+          <input
+            type="birthday"
+            placeholder="MM/DD/YYYY"
+          />
+          </div>
+
           <div className="secondLabel">
           <label>Breed</label>
           <input
@@ -33,13 +41,6 @@ class App extends React.Component {
           />
           </div>
 
-          <div className="thirdLabel">
-          <label>Birthday</label>
-          <input
-            type="birthday"
-            placeholder="MM/DD/YYYY"
-          />
-          </div>
 
         </form>
       </div>
