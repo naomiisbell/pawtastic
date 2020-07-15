@@ -147,6 +147,8 @@ class App extends React.Component {
           >Save and Exit</button>
 
         </form>
+
+        {this.state.formCompleted === true ? (<h2>Thank you for the information!</h2>) : null}
       </div>
       </div>
       </body>
